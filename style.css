@@ -1,0 +1,748 @@
+
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #A8D5BA/*jaune clair doré sinon vert doux #FFEB99 */;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Style */
+header {
+    background-color: rgba(0, 110, 78, 0.6); /* Navbar background color */
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Dropdown Menu Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 30px;/*hauteur de nav bar*/
+    align-items: center;
+}
+
+nav ul li {
+    position: relative; /* Ensure dropdown is positioned correctly */
+    margin:0 20px;
+
+}
+
+nav ul li a {
+    color: white;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: color 0.3s;
+
+}
+
+nav ul li a:hover {
+    color: #D4A017; /* Highlight color on hover */
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none; /* Hide dropdown initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(212, 160, 23, 0.9); /* Dropdown background color */
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: auto;/*dropcontent height */
+}
+
+.dropdown-content li {
+    text-align: left;
+    line-height: normal;
+}
+
+.dropdown-content li a {
+    color: white; /* Dropdown text color */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: rgba(0, 0, 0, 0.2); /* Hover background color for dropdown items */
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown content on hover */
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-right: 0;
+    }
+}
+
+
+
+/* Section Styling */
+section {
+    padding: 80px 20px 40px; /* Padding with space from header */
+    margin: 20px 120px;/* caré des section*/
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Large Image Background for Welcome Section */
+#accueil {
+    height: 170vh;
+    background-image: url('back-true.png'); /* background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+#accueil .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(255, 0, 0, 0.0);
+    border-radius: 10px;
+    color:white
+}
+
+#accueil h2 {
+    color:white
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#accueil p {
+    color:white
+    font-size: 1.5em;
+}
+
+.icgh__title {
+    font-size: var(--large-size); /* Font size as defined in variable */
+    color: #006E4E; /* Secondary color for title */
+    font-weight: 600; /* Bold weight */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 10px; /* Spacing between letters */
+    margin-bottom: 20px;
+}
+/* Styling for Other Sections * /
+section h2 {
+
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.section p  gg {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: white;
+}
+
+section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #505050;
+}
+
+/**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**//**/
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #A8D5BA;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #006E4E;
+}
+.download-button i {
+  margin-right: 8px; /* Espace entre l'icône et le texte */
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+  vertical-align: middle;
+  margin-right: 8px;
+  font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container pour les cartes des speakers */
+.speakers-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/*1111111111111111111111111111111111111111111111111111*/
+  body {
+        background-color: #A8D5BA;
+  }
+  /* Style global pour le formulaire */
+form {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 120px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+/* Style pour les étiquettes */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style pour les champs de saisie */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="file"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #006E4E;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+/* Champs focus */
+form input:focus {
+  border-color: #006E4E;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 110, 78, 0.4);
+}
+
+/* Style pour le bouton */
+form button {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  background-color: #006E4E;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Effet hover sur le bouton */
+form button:hover {
+  background-color: #D4A017;
+}
+
+/* Style pour le formulaire global */
+form button:active {
+  background-color:#D4A017 ;
+}
+
+/* Style pour les champs obligatoires */
+form input:invalid {
+  border-color: #003829;
+}
+
+
+
+
+/*11111111111111111111111111111111111111111111111111111*/
+
+
+/* Réduire la taille de la photo et du texte pour les écrans plus petits */
+@media (max-width: 768px) {
+    .speakers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between the icons */
+}
+
+.icon {
+    text-decoration: none;
+    color: #006E4E;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+/* Icon Hover Effects */
+.icon:hover {
+    color: #006E4E; /* Change color to green on hover */
+}
+
+/* Specific Icon Colors */
+.facebook:hover {
+    color: #3b5998; /* Facebook blue color */
+}
+
+.instagram:hover {
+    color: #C13584; /* Instagram pink color */
+}
+
+.youtube:hover {
+    color: #FF0000; /* YouTube red color */
+}
+/* Email Icon Hover Effect */
+.email:hover {
+    color: black; /* Orange color for the email icon on hover */
+}
+
+
+
+/* Footer Navigation Styling */
+.footer-nav {
+    list-style: none; /* Remove default list bullets */
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the list items */
+    gap: 20px; /* Space between the links */
+
+}
+
+.footer-nav li {
+    display: inline; /* Make the list items inline */
+}
+
+.footer-nav a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* White text color */
+    font-size: 16px;
+    transition: color 0.3s ease;
+    background:#006E4E;/*vert foncai pour titre navbar footer*/
+}
+
+.footer-nav a:hover {
+    color: #D4A017; /* Change text color on hover */
+}
+
+
+
+
+
+3/* Variables for easy customization */
+:root {
+    --color-primary: #D4A017; /* jaune 91AE40jaune */
+    --color-secondary: #006E4E; /*vert */ 
+    --color-text: #333; /* Dark Gray */
+}
+
+/* Letter Decoration */
+.letter {
+    background-color: #D4A017; /* jaune Background color for the first letter */
+    padding: 5px;
+    padding-left: 12px;
+    padding-right: 0;
+    color: #006E4E; /* vert color for the first letter */
+    font-weight: bold;
+    font-size: 1.9em;
+}
+
+
+/* Margin for the rest of the text */
+.ml-1 {
+    margin-left: 0.25rem;
+    color:#006E4E
+}
+
+/* Section Title Styling */
+.icgh__title {
+    font-size: var(--large-size); /* Example: 2.5em or adjust as needed */
+    color: var(--color-secondary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+4444
+
+
+
+*************************************************************************************
+
+
+
+
+/* Speaker Card Styling */
+
+
+
+.speakers-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px; /* Adjust for fixed header */
+            gap: 20px;
+        }
+
+.container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+.member {
+            flex: 0 0 calc(50% - 10px); /* Two members per row */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border-left: 6px solid #006E4E;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+.member h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #006E4E;
+        }
+
+.member p {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .speakers-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.logo-container {
+  flex-shrink: 0; /* Prevents shrinking of the logo container */
+
+}
+
+.logo {
+  height: 100px; /* Adjust height to fit in the nav */
+  width: auto;  /* Maintain aspect ratio */
+
+}
+
+
+/*les axes de la page de axe scientifique*/
+.axes-container {
+  text-align: center;
+  padding: 50px;
+}
+
+.axes-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.buttons-containerx {
+  display: flex; /* Aligne les boutons côte à côte */
+  justify-content: space-between; /* Espacement entre les boutons */
+  gap: 10px; /* Espacement fixe entre les boutons */
+  margin: 20px auto; /* Ajoute un espace en haut et en bas */
+  max-width: 600px; /* Largeur maximale pour aligner les boutons */
+}
+
+.buttons-containerx button {
+  display: flex; /* Permet de placer l'icône et le texte horizontalement */
+  align-items: center; /* Aligne verticalement le texte et l'icône */
+  justify-content: center; /* Centre le contenu à l'intérieur du bouton */
+  background-color: #4C9983; /* Couleur de fond des boutons */
+  color: white; /* Couleur du texte et des icônes */
+  border: none; /* Supprime les bordures */
+  padding: 10px 20px; /* Espacement intérieur */
+  font-size: 16px; /* Taille du texte */
+  font-weight: bold; /* Texte en gras */
+  border-radius: 5px; /* Coins arrondis */
+  cursor: pointer; /* Curseur pointer sur le bouton */
+  text-transform: uppercase; /* Met le texte en majuscules */
+  transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.buttons-containerx button i {
+  margin: 0 5px; /* Espacement entre l'icône et le texte */
+}
+
+.buttons-containerx button:hover {
+  background-color: #006E4E; /* Couleur de fond au survol */
+}
+
+.btn-prev {
+  flex-grow: 1; /* Optionnel : rend les deux boutons de même taille */
+}
+
+.btn-next {
+  flex-grow: 1; /* Optionnel : rend les deux boutons de même taille */
+}
+.buttons-container button {
+  width: 60%;
+  margin: 10px;
+  padding: 10px 10px;
+  align-items: center;
+  flex-direction: column;
+  font-size: 18px;
+  color: white;
+  background-color: #4C9983;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.buttons-container button:hover {
+  background-color: #006E4E;
+}
+
+/*fin axes scientifique*/
+/*detail d' un seule axe*/
+.axe-details {
+  padding: 50px;
+  text-align: center;
+}
+
+.axe-details h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.axe-details p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+/*fin detail d' un axe */
+
+/*container et image de topic*/
+.topics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+.topics-text {
+    flex: 1;
+    font-size: 18px;
+    line-height: 1.8;
+}
+.topics-image {
+    flex: 0.9;
+    text-align: center;
+}
+
+.topics-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+/*fin image de topic*/
+/*program*/
+.program-details{
+    display: flex;
+    justify-content: space-between; /* Espace entre les deux jours */
+    gap: 40px; /* Espace entre les colonnes */
+    flex-wrap: wrap; /* Permet de revenir à une colonne sur les petits écrans */
+}
+h3{
+    flex:0.3;
+    color: #4C9983;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.program-day{
+    flex: 1;
+}
+
+.program-day h4 {
+    flex:1;
+    color: #4C9983;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.program-day ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.program-day ul li {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.program-day ul li strong {
+    color: #333;
+    font-weight: bold;
+}
+
+.program-day {
+    margin-bottom: 20px;
+    border-left: 4px solid #4C9983;
+    padding-left: 10px;
+}
+/*program*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*55555555555555555555555555555555555555555555555555555555*/
+
+ .logos {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 4rem;
+  width: 1011px; /* Taille du conteneur */
+  height: 240px; /* Hauteur du conteneur */
+}
+
+ .logos .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--color-secondary, #ccc);
+  background-color: var(--color-white, #fff);
+  width: 228px; /* Largeur du logo */
+  height: 240px; /* Hauteur du logo */
+  padding: 1rem;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.logos .logo img {
+  width: 228px; /* Largeur fixe */
+  height: 240px; /* Hauteur fixe */
+  object-fit: cover; /* Ajustement de l'image */
+  color: transparent;
+    padding: 2rem;
+}
+
+/* Responsive Images */
+img, video {
+  max-width: 140%;
+  height: auto;
+
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+}
+
+/* Media Queries */
+@media (max-width: 1011px) {
+ .logos {
+    flex-wrap: wrap;
+    width: 100%; /* Adaptation à l'écran */
+  }
+ .logos .logo {
+    flex-basis: calc(50% - 1rem);
+    height: 240px;
+
+  }
+}
+
+@media (max-width: 480px) {
+.logos .logo {
+    flex-basis: 100%;
+    height: 240px;
+  }
+}
+
+
